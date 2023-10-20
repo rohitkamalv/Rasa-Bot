@@ -6,6 +6,7 @@ const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(express.json());
 const axios = require('axios');
+
 app.post('/',(req,res) => {
         var abcd = req.body.user;
         console.log("message here ->",abcd);
@@ -30,24 +31,27 @@ app.post('/',(req,res) => {
         <button type="submit" >submit</button>
     </form>
     <br>
+    <button id="voicebtn"> Voice </button>
+    <br>
     <p>${resp}</p>
     <br>
     <label for="output">OUTPUT:</label>
     <input type="text" name="output" id="op" value="${resp}">
+    <script src="/js/speech.js" type="text/javascript"></script>
 </body>
 </html>`;
-    res.send(modifiedhtml);
+    if (req.body.voice == true) { res.send(response.data[0]); }
+    else { res.send(modifiedhtml); } 
         })
 })
+
+app.use('/js', express.static(path.join(__dirname, 'js')));
 
 app.get("/",(req,res) => {
     res.sendFile(path.join(__dirname,'/index.html'))
 })
 
-
-
-
-
 app.listen(port, () => {
     console.log("backend has started listening")
 })
+
