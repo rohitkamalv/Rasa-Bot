@@ -1,91 +1,58 @@
-version: "3.1"
+version: "2.0"
 
 nlu:
 - intent: greet
   examples: |
-    - hey
-    - hello
     - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+    - hello
+    - hey
+    - hi there
 
-- intent: goodbye
+- intent: ask_menu
   examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+    - What's on the menu?
+    - Can you show me the menu?
+    - I'd like to see the menu
+    - Tell me about your menu
 
-- intent: affirm
+- intent: order_food
   examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+    - I'd like to order a coffee
+    - Can I get a sandwich?
+    - I want a slice of cake
+    - Please order a pizza for me
 
-- intent: deny
+- intent: reserve_table
   examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+    - Can I book a table?
+    - Are there any tables available?
+    - I'd like to reserve a table for two
+    - How can I book a table?
 
-- intent: mood_great
+- intent: ask_offers
   examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+    - Do you have any special offers?
+    - What promotions are available?
+    - Are there any discounts?
+    - Tell me about your deals
 
-- intent: mood_unhappy
+- intent: check_order_status
   examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+    - Where is my order?
+    - Can you check my order status?
+    - I ordered food earlier, what's the status?
+    - Is my order ready?
 
-- intent: bot_challenge
+- intent: dietary_preference
   examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - I'm vegetarian, what can I eat?
+    - Do you have gluten-free options?
+    - I have allergies, what can I order?
+    - Suggest something healthy
+
+- intent: give_feedback
+  examples: |
+    - I have some feedback
+    - Can I give feedback?
+    - I want to share my experience
+    - Provide feedback

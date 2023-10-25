@@ -1,30 +1,55 @@
-version: "3.1"
+version: "2.0"
 
 stories:
+  - story: Order_Food
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_menu
+      - action: utter_provide_menu
 
-- story: happy path
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
+  - story: Place_an_Order
+    steps:
+      - intent: ask_menu
+      - action: utter_provide_menu
+      - intent: order_food
+      - action: utter_process_order
+      - action: utter_order_confirmation
 
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+  - story: Reserve_a_Table
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: reserve_table
+      - action: utter_check_table_availability
+      - action: utter_provide_table_availability
 
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+  - story: Special_Offers
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_offers
+      - action: utter_provide_special_offers
+
+  - story: Check_Order_Status
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: check_order_status
+      - action: utter_1check_order_status
+      - action: utter_provide_order_status
+
+  - story: Dietary_Preferences
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: dietary_preference
+      - action: utter_suggest_customized_men
+
+  - story: Give_Feedback
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: give_feedback
+      - action: utter_collect_feedback
+      - action: utter_thank_you_feedback

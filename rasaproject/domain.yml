@@ -1,34 +1,52 @@
-version: "3.1"
+version: "3.0"
 
 intents:
   - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
+  - ask_menu
+  - order_food
+  - reserve_table
+  - ask_offers
+  - check_order_status
+  - dietary_preference
+  - give_feedback
+
+actions:
+  - utter_greet
+  - utter_order_confirmation
+  - utter_1check_order_status
+  - utter_check_table_availability
+  - utter_collect_feedback
+  - utter_process_order
+  - utter_suggest_customized_men
+  - utter_provide_order_status
+  - utter_provide_special_offers
+  - utter_provide_table_availability
+  - utter_thank_you_feedback
+  - utter_provide_menu
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+    - text: "Hello! Welcome to Cafe Bot. How can I assist you today?"
+  utter_order_confirmation:
+    - text: "Great choice! Your order has been placed. It will be ready shortly."
+  utter_thank_you_feedback:
+    - text: "Thank you for your feedback! We appreciate your input."
+  utter_provide_menu:
+    - text : "this is the menu!"
+  utter_provide_table_availability:
+    - text : "2 tables available"
+  utter_provide_special_offers:
+    - text : "50% off"
+  utter_provide_order_status:
+    - text : "order ready"
+  utter_suggest_customized_men:
+    - text : "customised your menu."
+  utter_process_order:
+    - text : "customised action registered"
+  utter_collect_feedback:
+    - text : "give your feedback"
+  utter_check_table_availability:
+    - text : "checking table availability..."
+  utter_1check_order_status :
+    - text : "checking order status..."
 
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
-  utter_goodbye:
-  - text: "Bye"
-
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
-
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
