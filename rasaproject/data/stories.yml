@@ -1,55 +1,37 @@
-version: "2.0"
-
+version: "3.0"
 stories:
-  - story: Order_Food
-    steps:
-      - intent: greet
-      - action: utter_greet
-      - intent: ask_menu
-      - action: utter_provide_menu
 
-  - story: Place_an_Order
-    steps:
-      - intent: ask_menu
-      - action: utter_provide_menu
-      - intent: order_food
-      - action: utter_process_order
-      - action: utter_order_confirmation
+- story: User asks for Pokemon information
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: GetPokemonInfo
+  - action: action_get_pokemon_info
+  # - action: utter_thanks
 
-  - story: Reserve_a_Table
-    steps:
-      - intent: greet
-      - action: utter_greet
-      - intent: reserve_table
-      - action: utter_check_table_availability
-      - action: utter_provide_table_availability
+- story: User asks for a Pokemon's type
+  steps:
+  - intent: GetPokemonType
+  - action: action_get_pokemon_type
+  # - action: utter_thanks
 
-  - story: Special_Offers
-    steps:
-      - intent: greet
-      - action: utter_greet
-      - intent: ask_offers
-      - action: utter_provide_special_offers
+- story: User asks for a Pokemon's abilities
+  steps:
+  - intent: GetPokemonAbilities
+  - action: action_get_pokemon_abilities
+  # - action: utter_thanks
 
-  - story: Check_Order_Status
-    steps:
-      - intent: greet
-      - action: utter_greet
-      - intent: check_order_status
-      - action: utter_1check_order_status
-      - action: utter_provide_order_status
+- story: User asks for help
+  steps:
+  - intent: help
+  - action: utter_help
 
-  - story: Dietary_Preferences
-    steps:
-      - intent: greet
-      - action: utter_greet
-      - intent: dietary_preference
-      - action: utter_suggest_customized_men
+- story: User says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
 
-  - story: Give_Feedback
-    steps:
-      - intent: greet
-      - action: utter_greet
-      - intent: give_feedback
-      - action: utter_collect_feedback
-      - action: utter_thank_you_feedback
+- story: User provides an unknown intent
+  steps:
+  - intent: unknown
+  - action: utter_default

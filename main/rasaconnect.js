@@ -13,7 +13,7 @@ app.post('/',(req,res) => {
         const postData = {
             message: abcd
         }
-        axios.post("http://192.168.0.212:5005/webhooks/rest/webhook",postData).then((response)=>{
+        axios.post("http://192.168.51.90:5005/webhooks/rest/webhook",postData).then((response)=>{
         var resp = response.data[0]['text'];
         console.log('response',resp);
         const modifiedhtml = `
@@ -35,8 +35,6 @@ app.post('/',(req,res) => {
     <br>
     <p>${resp}</p>
     <br>
-    <label for="output">OUTPUT:</label>
-    <input type="text" name="output" id="op" value="${resp}">
     <script src="/js/speech.js" type="text/javascript"></script>
 </body>
 </html>`;

@@ -1,52 +1,54 @@
 version: "3.0"
 
 intents:
-  - greet
-  - ask_menu
-  - order_food
-  - reserve_table
-  - ask_offers
-  - check_order_status
-  - dietary_preference
-  - give_feedback
+- greet
+- GetPokemonInfo
+- GetPokemonType
+- GetPokemonAbilities
+- help
+- goodbye
+- unknown
+
+entities:
+- pokemon_name
 
 actions:
-  - utter_greet
-  - utter_order_confirmation
-  - utter_1check_order_status
-  - utter_check_table_availability
-  - utter_collect_feedback
-  - utter_process_order
-  - utter_suggest_customized_men
-  - utter_provide_order_status
-  - utter_provide_special_offers
-  - utter_provide_table_availability
-  - utter_thank_you_feedback
-  - utter_provide_menu
+- utter_greet
+- action_get_pokemon_info
+- action_get_pokemon_type
+- action_get_pokemon_abilities
+- utter_help
+- utter_goodbye
+- utter_default
+
 
 responses:
   utter_greet:
-    - text: "Hello! Welcome to Cafe Bot. How can I assist you today?"
-  utter_order_confirmation:
-    - text: "Great choice! Your order has been placed. It will be ready shortly."
-  utter_thank_you_feedback:
-    - text: "Thank you for your feedback! We appreciate your input."
-  utter_provide_menu:
-    - text : "this is the menu!"
-  utter_provide_table_availability:
-    - text : "2 tables available"
-  utter_provide_special_offers:
-    - text : "50% off"
-  utter_provide_order_status:
-    - text : "order ready"
-  utter_suggest_customized_men:
-    - text : "customised your menu."
-  utter_process_order:
-    - text : "customised action registered"
-  utter_collect_feedback:
-    - text : "give your feedback"
-  utter_check_table_availability:
-    - text : "checking table availability..."
-  utter_1check_order_status :
-    - text : "checking order status..."
+  - text: "Hello, Pokémon Trainer! How can I assist you today?"
+
+  utter_help:
+  - text: "I can assist with Pokémon-related queries. Feel free to ask about a Pokémon's abilities, types, or any other details."
+
+  utter_goodbye:
+  - text: "Farewell! If you have more questions, don't hesitate to return."
+
+  utter_default:
+  - text: "I'm sorry, I couldn't understand your request. Can you please rephrase it or ask another Pokémon-related question?"
+
+  # utter_get_pokemon_info:
+  #   - text: "Here's some information about [pokemon_name]. [Provide relevant details about the Pokémon.]"
+  #   - text: "[pokemon_name] is a fascinating Pokémon. [Provide details about the Pokémon.]"
+
+  # utter_get_pokemon_type:
+  #   - text: "[pokemon_name] is a [type]-type Pokémon."
+  #   - text: "The type of [pokemon_name] is [type]."
+
+  # utter_get_pokemon_abilities:
+  #   - text: "The abilities of [pokemon_name] are [ability_1], [ability_2], and [ability_3]."
+  #   - text: "[pokemon_name] possesses the abilities [ability_1], [ability_2], and [ability_3]."
+
+  # utter_say_thanks:
+  #   - text: "You're welcome! If you have more questions, feel free to ask."
+  #   - text: "No problem at all. If you need further assistance, don't hesitate to reach out."
+
 

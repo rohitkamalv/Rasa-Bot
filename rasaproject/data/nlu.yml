@@ -1,58 +1,69 @@
-version: "2.0"
+version: "3.1"
 
 nlu:
 - intent: greet
   examples: |
-    - hi
-    - hello
-    - hey
-    - hi there
+    - Hi
+    - Hello
+    - Hey there
+    - Good day!
+    - Greetings
+    - How's it going?
 
-- intent: ask_menu
+- intent: GetPokemonInfo
   examples: |
-    - What's on the menu?
-    - Can you show me the menu?
-    - I'd like to see the menu
-    - Tell me about your menu
+    - Tell me about [Pikachu](pokemon_name).
+    - Provide details on [Charizard](pokemon_name).
+    - I'd like to know about [Bulbasaur](pokemon_name).
+    - Information on [Mewtwo](pokemon_name), please.
+    - Give me insights into [Eevee](pokemon_name).
 
-- intent: order_food
+- intent: GetPokemonType
   examples: |
-    - I'd like to order a coffee
-    - Can I get a sandwich?
-    - I want a slice of cake
-    - Please order a pizza for me
+    - What's [Squirtle](pokemon_name)'s type?
+    - Tell me the type of [Charmander](pokemon_name).
+    - [Jigglypuff](pokemon_name)'s type?
+    - I'm curious about [Pidgey](pokemon_name)'s type.
+    - What type does [Snorlax](pokemon_name) belong to?
 
-- intent: reserve_table
+- intent: GetPokemonAbilities
   examples: |
-    - Can I book a table?
-    - Are there any tables available?
-    - I'd like to reserve a table for two
-    - How can I book a table?
+    - List the abilities of [Pikachu](pokemon_name).
+    - Tell me [Gengar](pokemon_name)'s abilities.
+    - What are the abilities of [Jolteon](pokemon_name)?
+    - Share [Vaporeon](pokemon_name)'s abilities with me.
+    - Tell me about the abilities of [Machamp](pokemon_name).
 
-- intent: ask_offers
+- intent: help
   examples: |
-    - Do you have any special offers?
-    - What promotions are available?
-    - Are there any discounts?
-    - Tell me about your deals
+    - I need help!
+    - Can you assist me?
+    - How can you guide me?
+    - I'm lost, help!
+    - Could you provide some assistance, please?
 
-- intent: check_order_status
+- intent: goodbye
   examples: |
-    - Where is my order?
-    - Can you check my order status?
-    - I ordered food earlier, what's the status?
-    - Is my order ready?
+    - Goodbye
+    - See you later
+    - Farewell
+    - Bye for now
+    - Take care
+    - Until next time
 
-- intent: dietary_preference
+- intent: unknown
   examples: |
-    - I'm vegetarian, what can I eat?
-    - Do you have gluten-free options?
-    - I have allergies, what can I order?
-    - Suggest something healthy
+    - I don't understand.
+    - I'm not sure.
+    - What do you mean?
+    - That's confusing.
+    - Could you clarify, please?
+    - I'm lost.
 
-- intent: give_feedback
+- intent: say_thanks
   examples: |
-    - I have some feedback
-    - Can I give feedback?
-    - I want to share my experience
-    - Provide feedback
+    - Thank you
+    - Thanks
+    - Appreciate it
+    - Grateful
+    - You've been helpful
