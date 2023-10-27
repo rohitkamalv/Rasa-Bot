@@ -12,6 +12,14 @@ intents:
 entities:
 - pokemon_name
 
+slots:
+  pokemon_name:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: pokemon_name
+
 actions:
 - utter_greet
 - action_get_pokemon_info
@@ -24,7 +32,7 @@ actions:
 
 responses:
   utter_greet:
-  - text: "Hello, Pokémon Trainer! How can I assist you today?"
+  - text: "Hello, Pokémon Trainer! How can I assist you today?. Right now I can help you out with getting a Pokemons stats, type and abilities."
 
   utter_help:
   - text: "I can assist with Pokémon-related queries. Feel free to ask about a Pokémon's abilities, types, or any other details."

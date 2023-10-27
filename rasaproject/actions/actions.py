@@ -35,7 +35,7 @@ class ActionGetPokemonInfo(Action):
         return "action_get_pokemon_info"
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        pokemon_name = next(tracker.get_latest_entity_values('pokemon_name'))
+        pokemon_name = (tracker.get_slot('pokemon_name'))
         def get_pokemon_info(pokemon_name):
             response = requests.get("https://pokeapi.co/api/v2/pokemon/" + pokemon_name.lower())
 
@@ -58,6 +58,9 @@ class ActionGetPokemonInfo(Action):
         
         if pokemon_info:
             dispatcher.utter_message("Here's some information about {}:\n{}".format(pokemon_name, pokemon_info))
+            button = [{"title" : "Pokemon Type" , "payload" : "/GetPokemonType"},{"title" : "Pokemon Abilities" , "payload" : "/GetPokemonAbilities"}]
+            dispatcher.utter_button_message(text="test",buttons=button)
+            
         else:
             dispatcher.utter_message("I couldn't find information about {}. Please provide the name of a valid Pokémon.".format(pokemon_name))
 
@@ -68,7 +71,7 @@ class ActionGetPokemonType(Action):
         return "action_get_pokemon_type"
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        pokemon_name = next(tracker.get_latest_entity_values('pokemon_name'))
+        pokemon_name = (tracker.get_slot('pokemon_name'))
 
         def get_pokemon_type(pokemon_name):
             response = requests.get("https://pokeapi.co/api/v2/pokemon/" + pokemon_name.lower())
@@ -84,6 +87,8 @@ class ActionGetPokemonType(Action):
         
         if pokemon_type:
             dispatcher.utter_message("{} is a {}-type Pokémon.".format(pokemon_name, pokemon_type))
+            button = [{"title" : "Pokemon Info" , "payload" : "/GetPokemonInfo"},{"title" : "Pokemon Abilities" , "payload" : "/GetPokemonAbilities"}]
+            dispatcher.utter_button_message(text="test",buttons=button)
         else:
             dispatcher.utter_message("I couldn't determine the type of {}. Please provide the name of a valid Pokémon.".format(pokemon_name))
 
@@ -94,7 +99,7 @@ class ActionGetPokemonAbilities(Action):
         return "action_get_pokemon_abilities"
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        pokemon_name = next(tracker.get_latest_entity_values('pokemon_name'))
+        pokemon_name = (tracker.get_slot('pokemon_name'))
         def get_pokemon_abilities(pokemon_name):
             response = requests.get("https://pokeapi.co/api/v2/pokemon/" + pokemon_name.lower())
 
@@ -109,6 +114,8 @@ class ActionGetPokemonAbilities(Action):
         
         if pokemon_abilities:
             dispatcher.utter_message("The abilities of {} are: {}".format(pokemon_name, ", ".join(pokemon_abilities)))
+            button = [{"title" : "Pokemon Info" , "payload" : "/GetPokemonInfo"},{"title" : "Pokemon Type" , "payload" : "/GetPokemonType"}]
+            dispatcher.utter_button_message(text="test",buttons=button)
         else:
             dispatcher.utter_message("I couldn't find information about the abilities of {}. Please provide the name of a valid Pokémon.".format(pokemon_name))
 

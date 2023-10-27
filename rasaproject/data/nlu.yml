@@ -9,6 +9,21 @@ nlu:
     - Good day!
     - Greetings
     - How's it going?
+    - Hi there, how's it going?
+    - Hello, nice to see you!
+    - Hey, how's your day going?
+    - Good day! How can I assist you?
+    - Greetings! What can I do for you?
+    - Hey there, what's on your mind?
+    - Hello, what brings you here today?
+    - Hi, it's great to have you here.
+    - Good day! What can I help you with?
+    - Hello, nice to meet you.
+    - Hi, how can I assist you today?
+    - Hey there, how's everything going?
+    - Hello, how can I be of service?
+    - Greetings, what can I do for you today?
+    - Hi, I'm here to help. What do you need?
 
 - intent: GetPokemonInfo
   examples: |
@@ -17,6 +32,51 @@ nlu:
     - I'd like to know about [Bulbasaur](pokemon_name).
     - Information on [Mewtwo](pokemon_name), please.
     - Give me insights into [Eevee](pokemon_name).
+    - Provide information about [Blastoise](pokemon_name).
+    - What can you tell me about [Mew](pokemon_name).
+    - Share details on [Gyarados](pokemon_name).
+    - I'd like to learn more about [Articuno](pokemon_name).
+    - Tell me everything about [Dragonite](pokemon_name).
+    - Give me the scoop on [Lugia](pokemon_name).
+    - Tell me about the Pokemon named [Pidgeot](pokemon_name).
+    - What's the story with [Machop](pokemon_name).
+    - I want to know about [Venusaur](pokemon_name).
+    - Tell me about the legendary [Rayquaza](pokemon_name).
+    - Provide details on [Lucario](pokemon_name).
+    - Give me insights into [Greninja](pokemon_name).
+    - What do you know about [Garchomp](pokemon_name).
+    - Tell me about the rare Pokemon [Zapdos](pokemon_name).
+    - Share information on [Gardevoir](pokemon_name).
+    - I'm interested in learning about [Alakazam](pokemon_name).
+    - Tell me about [Eevee](pokemon_name)'s evolutions.
+    - What's unique about [Mimikyu](pokemon_name).
+    - Share information about [Scyther](pokemon_name).
+    - Tell me about [Tyranitar](pokemon_name)'s Mega Evolution.
+    - I'd like to know about [Misdreavous](pokemon_name).
+    - Provide details on [Gengar](pokemon_name)'s backstory.
+    - Share information about the ancient Pokemon [Kabutops](pokemon_name).
+    - What's the lore behind [Giratina](pokemon_name).
+    - Tell me about [Mewtwo](pokemon_name)'s genetic origin.
+    - I'd like to know about [Metagross](pokemon_name).
+    - Give me insights into [Groudon](pokemon_name)'s role in the Pokemon world.
+    - Tell me about [Salamence](pokemon_name)'s strengths and weaknesses.
+    - What's the story behind [Machamp](pokemon_name)'s extra arms?
+    - Share information on [Porygon-Z](pokemon_name).
+    - Provide details about [Celebi](pokemon_name)'s time-traveling abilities.
+    - What's the connection between [Houndoom](pokemon_name) and the underworld?
+    - Share information on [Sylveon](pokemon_name)'s unique evolution method.
+    - Tell me about [Manaphy](pokemon_name)'s mythical status.
+    - I'm interested in the relationship between [Vaporeon](pokemon_name) and water.
+    - Provide information on [Garchomp](pokemon_name)'s land-shark appearance.
+    - Tell me about [Tyranitar](pokemon_name)'s destructive power.
+    - What are the origins of [Charizard](pokemon_name)'s dragon-like features?
+    - Share information about [Lapras](pokemon_name)'s gentle nature.
+    - Tell me about the abilities of [Bulbasaur](pokemon_name)'s hidden form.
+    - I'd like to learn about the regional variants of [Raichu](pokemon_name).
+    - Provide details on [Pikachu](pokemon_name)'s popularity.
+    - What makes [Eevee](pokemon_name) unique in the Pokemon world?
+    - Creating a Pokémon bot with Rasa can be a challenging yet rewarding project. Have fun building your Pokémon bot, and feel free to ask if you have any specific questions along the way!
+
 
 - intent: GetPokemonType
   examples: |
@@ -25,6 +85,57 @@ nlu:
     - [Jigglypuff](pokemon_name)'s type?
     - I'm curious about [Pidgey](pokemon_name)'s type.
     - What type does [Snorlax](pokemon_name) belong to?
+    - What type is [Gengar](pokemon_name)?
+    - Tell me the elemental type of [Steelix](pokemon_name).
+    - [Charizard](pokemon_name)'s primary type?
+    - I'm curious about [Machop](pokemon_name)'s typing.
+    - What type does [Gyarados](pokemon_name) resist?
+    - What are the dual types of [Dragonite](pokemon_name)?
+    - Tell me the type advantages of [Pidgey](pokemon_name).
+    - What type is strong against [Alakazam](pokemon_name)?
+    - Tell me the weaknesses of [Venusaur](pokemon_name)'s Grass type.
+    - What type does [Scizor](pokemon_name) have an advantage over?
+    - What type is [Salamence](pokemon_name) vulnerable to?
+    - Tell me the type matchups for [Lucario](pokemon_name).
+    - What are the type strengths of [Garchomp](pokemon_name)?
+    - Tell me the elemental type of [Houndoom](pokemon_name).
+    - [Mimikyu](pokemon_name)'s type?
+    - I'm curious about [Tyranitar](pokemon_name)'s dual typing.
+    - What's the type combination for [Sylveon](pokemon_name)?
+    - Tell me the elemental types of [Gardevoir](pokemon_name).
+    - What type is [Blastoise](pokemon_name)'s Mega form?
+    - Tell me the type disadvantages of [Greninja](pokemon_name).
+    - What type is strong against [Zapdos](pokemon_name)?
+    - What's [Mewtwo](pokemon_name)'s Psychic type effective against?
+    - Tell me the type resistances of [Misdreavous](pokemon_name).
+    - What type is [Articuno](pokemon_name) and how does it affect its habitat?
+    - What are the type weaknesses of [Mew](pokemon_name)?
+    - I'm curious about [Kabutops](pokemon_name)'s Rock/Water type.
+    - What type is [Giratina](pokemon_name)'s altered form?
+    - Tell me the type effectiveness of [Rayquaza](pokemon_name) in battle.
+    - What type does [Porygon-Z](pokemon_name) have an affinity for?
+    - Tell me the type resistances of [Groudon](pokemon_name).
+    - What type is [Machamp](pokemon_name) known for?
+    - What are the elemental types of [Celebi](pokemon_name).
+    - What type is [Sylveon](pokemon_name) and how does it relate to Fairy-type moves?
+    - Tell me about the type advantages of [Pidgeot](pokemon_name).
+    - What type is [Vaporeon](pokemon_name) and how does it relate to Water-type moves?
+    - What type is [Metagross](pokemon_name) and how does it affect its abilities?
+    - Tell me about the type resistances of [Mimikyu](pokemon_name).
+    - What type is [Lugia](pokemon_name) and how does it relate to Psychic-type moves?
+    - I'd like to know the type strengths of [Jigglypuff](pokemon_name).
+    - What type is [Gengar](pokemon_name) and how does it relate to Ghost-type moves?
+    - Tell me about the type combinations of the regional variants of [Raichu](pokemon_name).
+    - What type is [Gardevoir](pokemon_name) and how does it relate to Fairy-type moves?
+    - What type is [Salamence](pokemon_name) and how does it relate to Dragon-type moves?
+    - Tell me about the elemental types of [Machop](pokemon_name).
+    - What type is [Houndoom](pokemon_name) and how does it relate to Dark-type moves?
+    - What type is [Dragonite](pokemon_name) and how does it relate to Dragon-type moves?
+    - Tell me the dual types of [Pidgey](pokemon_name).
+    - What type is strong against [Garchomp](pokemon_name)?
+    - What type is [Mewtwo](pokemon_name) and how does it relate to Psychic-type moves?
+    - Tell me about the type matchups for [Scyther](pokemon_name).
+
 
 - intent: GetPokemonAbilities
   examples: |
@@ -33,37 +144,128 @@ nlu:
     - What are the abilities of [Jolteon](pokemon_name)?
     - Share [Vaporeon](pokemon_name)'s abilities with me.
     - Tell me about the abilities of [Machamp](pokemon_name).
+    - List [Mewtwo](pokemon_name)'s abilities.
+    - Tell me [Gengar](pokemon_name)'s hidden abilities.
+    - What are the special abilities of [Jolteon](pokemon_name)?
+    - Share [Vaporeon](pokemon_name)'s unique abilities with me.
+    - Tell me about the abilities of [Machamp](pokemon_name)'s Gigantamax form.
+    - List [Greninja](pokemon_name)'s abilities.
+    - Share information about [Kabutops](pokemon_name)'s hidden abilities.
+    - What are the abilities of [Articuno](pokemon_name) in the Galar region?
+    - Tell me [Eevee](pokemon_name)'s abilities and its Eeveelutions.
+    - Share information on [Scyther](pokemon_name)'s special abilities.
+    - Tell me about [Tyranitar](pokemon_name)'s abilities.
+    - What are the abilities of [Charizard](pokemon_name)'s Gigantamax form?
+    - List the hidden abilities of [Lapras](pokemon_name).
+    - Share information about [Mew](pokemon_name)'s legendary abilities.
+    - Tell me about the unique abilities of [Garchomp](pokemon_name)'s Mega form.
+    - What are the abilities of [Salamence](pokemon_name)'s Mega Evolution?
+    - Tell me [Machop](pokemon_name)'s basic abilities.
+    - Share [Gyarados](pokemon_name)'s abilities with me.
+    - Tell me about the special abilities of [Pidgey](pokemon_name).
+    - List [Alakazam](pokemon_name)'s abilities.
+    - Share information about [Jigglypuff](pokemon_name)'s abilities.
+    - Tell me about the abilities of [Scizor](pokemon_name)'s Mega form.
+    - What are the abilities of [Gardevoir](pokemon_name)'s Mega form?
+    - Tell me about the hidden abilities of [Misdreavous](pokemon_name).
+    - Share [Zapdos](pokemon_name)'s unique abilities.
+    - Tell me about [Articuno](pokemon_name)'s abilities in the Galar region.
+    - List [Dragonite](pokemon_name)'s abilities.
+    - Share information on [Mimikyu](pokemon_name)'s special abilities.
+    - Tell me about the abilities of [Blastoise](pokemon_name)'s Gigantamax form.
+    - What are the abilities of [Mewtwo](pokemon_name)'s Mega form?
+    - Tell me about the special abilities of [Rayquaza](pokemon_name).
+    - Share [Gengar](pokemon_name)'s abilities and its Mega Evolution.
+    - Tell me about the unique abilities of [Eevee](pokemon_name)'s Eeveelutions.
+    - List [Machamp](pokemon_name)'s abilities.
+    - Share information about [Mew](pokemon_name)'s Mewtwo DNA abilities.
+    - What are the abilities of [Kabutops](pokemon_name)'s hidden form?
+    - Tell me about the abilities of [Giratina](pokemon_name)'s Origin Forme.
+    - Share [Mewtwo](pokemon_name)'s abilities in the Kanto region.
+    - Tell me about the abilities of [Rayquaza](pokemon_name) in the Hoenn region.
+    - What are the abilities of [Machamp](pokemon_name)'s Gigantamax form.
+    - Tell me about the abilities of the regional variants of [Raichu](pokemon_name).
+    - List [Gardevoir](pokemon_name)'s abilities.
+    - Share information about [Sylveon](pokemon_name)'s abilities and its evolution method.
+    - Tell me about the special abilities of [Manaphy](pokemon_name).
+    - What are the abilities of [Vaporeon](pokemon_name) and how do they relate to Water-type moves?
+    - Tell me about [Garchomp](pokemon_name)'s abilities and its role in the Pokemon world.
+    - List [Tyranitar](pokemon_name)'s abilities.
+
 
 - intent: help
   examples: |
-    - I need help!
-    - Can you assist me?
-    - How can you guide me?
-    - I'm lost, help!
-    - Could you provide some assistance, please?
+    - I need some assistance with this.
+    - Can you guide me through this?
+    - Help! I'm stuck and don't know what to do.
+    - Please lend a hand.
+    - I could use some support, please.
+    - Assist me in understanding this better.
+    - Could you provide me with some help, please?
+    - I'm in a bit of a jam, can you help me out?
+    - How can I get some help here?
+    - I'm lost and need your assistance.
+    - Can you assist with this problem I'm facing?
+    - Help is much appreciated.
+    - I require your help urgently.
+    - Help me, please!
+    - I'm seeking your guidance.
+    - Assist me with this issue.
+    - I'm in a pickle, can you help me out?
 
 - intent: goodbye
   examples: |
-    - Goodbye
-    - See you later
-    - Farewell
-    - Bye for now
-    - Take care
-    - Until next time
+    - Goodbye, see you later!
+    - Farewell, until next time.
+    - Bye for now, take care!
+    - It's time to say goodbye.
+    - See you again soon!
+    - Until we meet again, goodbye.
+    - I'm off, goodbye!
+    - Farewell for now.
+    - I'll catch you later, goodbye.
+    - Goodbye, and have a great day!
+    - It's been a pleasure, goodbye.
+    - I'm signing off, see you later.
+    - Time to go, farewell!
+    - Until next time, take care.
+    - Goodbye, stay safe.
+    - Bye for now, see you soon.
 
 - intent: unknown
   examples: |
-    - I don't understand.
-    - I'm not sure.
-    - What do you mean?
-    - That's confusing.
-    - Could you clarify, please?
-    - I'm lost.
+    - I'm not sure what you mean.
+    - This is a bit confusing.
+    - I'm lost, could you explain?
+    - What do you mean by that?
+    - I don't quite understand.
+    - I need clarification.
+    - Could you make this clearer, please?
+    - This is beyond my comprehension.
+    - It's like a puzzle I can't solve.
+    - I'm baffled by this.
+    - That's a mystery to me.
+    - This is over my head.
+    - I'm completely in the dark.
+    - I need some light on this matter.
+    - I'm in a fog of confusion.
 
 - intent: say_thanks
   examples: |
-    - Thank you
-    - Thanks
-    - Appreciate it
-    - Grateful
-    - You've been helpful
+    - Thank you so much for your help!
+    - Thanks a million!
+    - I'm really grateful for your assistance.
+    - I can't thank you enough.
+    - You've been a great help, thank you!
+    - I appreciate your support.
+    - Thanks a bunch!
+    - You've made my day, thanks!
+    - Your help means a lot, thank you.
+    - Thanks for being so awesome.
+    - I owe you one, thanks!
+    - You've been a lifesaver, thank you.
+    - Big thanks for your guidance.
+    - You're amazing, thank you.
+    - I'm deeply thankful for your help.
+
+
